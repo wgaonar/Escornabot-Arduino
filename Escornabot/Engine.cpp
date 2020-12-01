@@ -86,21 +86,21 @@ void Engine::_prepareMove()
     switch (move)
     {
         case MOVE_RIGHT:
-            delta_degrees = +(_program->getTurnDegrees());
-            turn(delta_degrees);
-            break;
-
-        case MOVE_LEFT:
             delta_degrees = -(_program->getTurnDegrees());
             turn(delta_degrees);
             break;
 
+        case MOVE_LEFT:
+            delta_degrees = +(_program->getTurnDegrees());
+            turn(delta_degrees);
+            break;
+
         case MOVE_FORWARD:
-            moveStraight(_calculateAdvanceUnits());
+            moveStraight(-_calculateAdvanceUnits());
             break;
 
         case MOVE_BACKWARD:
-            moveStraight(-_calculateAdvanceUnits());
+            moveStraight(+_calculateAdvanceUnits());
             break;
 
         case MOVE_PAUSE:
@@ -108,12 +108,12 @@ void Engine::_prepareMove()
             break;
 
         case MOVE_ALT_RIGHT:
-            delta_degrees = +(_program->getAltTurnDegrees());
+            delta_degrees = -(_program->getAltTurnDegrees());
             turn(delta_degrees);
             break;
 
         case MOVE_ALT_LEFT:
-            delta_degrees = -(_program->getAltTurnDegrees());
+            delta_degrees = +(_program->getAltTurnDegrees());
             turn(delta_degrees);
             break;
 
