@@ -83,10 +83,10 @@ See LICENSE.txt for details
 
 // keypad leds
 #define USE_KEYPAD_LEDS true
-#define KEYPAD_LED_PIN_UP A0
-#define KEYPAD_LED_PIN_RIGHT A3
-#define KEYPAD_LED_PIN_DOWN A2
-#define KEYPAD_LED_PIN_LEFT A1
+#define KEYPAD_LED_PIN_UP A3
+#define KEYPAD_LED_PIN_RIGHT A0
+#define KEYPAD_LED_PIN_DOWN A1
+#define KEYPAD_LED_PIN_LEFT A2
 #define KEYPAD_LED_PIN_GO 13
 
 
@@ -109,7 +109,7 @@ See LICENSE.txt for details
 // step calibration
 #define STEPPERS_STEPS_PER_SECOND 1000
 #define STEPPERS_LINE_STEPS 1738
-#define STEPPERS_TURN_STEPS 1024
+#define STEPPERS_TURN_STEPS 1210
 
 #endif
 
@@ -146,11 +146,11 @@ See LICENSE.txt for details
 #define BS_ANALOG_PIN A7
 
 // input values for each key pressed (0 if key doesn't exist)
-#define BS_ANALOG_VALUE_UP 512
-#define BS_ANALOG_VALUE_RIGHT 860
-#define BS_ANALOG_VALUE_DOWN 769
-#define BS_ANALOG_VALUE_LEFT 683
-#define BS_ANALOG_VALUE_GO 810
+#define BS_ANALOG_VALUE_UP 517
+#define BS_ANALOG_VALUE_RIGHT 878
+#define BS_ANALOG_VALUE_DOWN 770
+#define BS_ANALOG_VALUE_LEFT 686
+#define BS_ANALOG_VALUE_GO 820
 #define BS_ANALOG_VALUE_RESET 0
 
 #endif // BUTTONS_ANALOG
